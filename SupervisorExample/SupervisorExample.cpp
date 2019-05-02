@@ -1,5 +1,8 @@
 
-#include "stdafx.h"
+#include <Windows.h>
+#include <iostream>
+#include "../ExceptionSupervisor/ExceptionSupervisor.hpp"
+#pragma comment(lib, "../Release/ExceptionSupervisor.lib")
 
 LONG WINAPI ExampleSupervisor(PEXCEPTION_RECORD pExceptionRecord, PCONTEXT pContext)
 {
@@ -20,8 +23,8 @@ int main()
 	std::cout << "SUCCESS\n";
 	__try
 	{
-		volatile int* px = NULL;
-		*px = 'err';
+		volatile int* px = nullptr;
+		*px = 0;
 	}
 	__except (GetExceptionInformation(), GetExceptionCode())
 	{

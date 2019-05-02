@@ -3,8 +3,7 @@
 /*
 *
 *	EXCEPTION SUPERVISOR, designed for Windows 10
-*	by Louka (@mb_louka)
-*	https://github.com/LoukaMB
+*	https://github.com/LoukaMB/ExceptionSupervisor
 *
 *	This library implements an additional chain that receives every thrown
 *	exception before the SEH or VEH chain does. It can be used to prevent an
